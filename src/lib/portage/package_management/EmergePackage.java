@@ -5,6 +5,7 @@ public class EmergePackage {
   private boolean verbose_mode = true;
   public EmergePackage(String path) {
     this.path = path;
+    
   }
   /**
    * IMPORTANT: do NOT use this method for setting the path of the package,

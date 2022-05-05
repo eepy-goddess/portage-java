@@ -3,15 +3,15 @@ package lib.portage.package_management.flags;
 import lib.portage.interfaces.FlagFeature;
 import lib.portage.package_management.EmergePackage;
 
-public class Quiet implements FlagFeature {
+public class Deep implements FlagFeature {
+
 	@Override
 	public int flagId() {
-		return 1;
+		return 2;
 	}
 
 	@Override
-	public boolean deployFlag(EmergePackage pack) {
-		pack.setVerboseMode(false);
+	public boolean deployFlag(EmergePackage packag) {
 		return false;
 	}
 
