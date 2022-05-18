@@ -1,4 +1,4 @@
-package lib.portage.package_management;
+package main.lib.portage.package_management;
 
 public class EmergePackage {
   private String path;
@@ -24,4 +24,13 @@ public class EmergePackage {
   public boolean getVerboseMode() {
 	  return this.verbose_mode;
   }
+  public void useFlagInstructions(String use_flags) {
+		  if(use_flags.equals("elogind")) {
+			  System.out.println("bro, elogind is bloat");
+		  }
+		  if(use_flags.equals("gnome-bad")) {
+			  System.out.println("based");
+		  }
+  	}
 }
+

@@ -1,10 +1,10 @@
-package lib.portage.enums;
+package main.lib.portage.enums;
 
-import lib.portage.Main;
-import lib.portage.package_management.flags.Deep;
-import lib.portage.package_management.flags.Quiet;
-import lib.portage.package_management.flags.Update;
-import lib.portage.package_management.flags.Verbose;
+import main.lib.portage.Main;
+import main.lib.portage.package_management.flags.Deep;
+import main.lib.portage.package_management.flags.Quiet;
+import main.lib.portage.package_management.flags.Update;
+import main.lib.portage.package_management.flags.Verbose;
 
 public enum EmergeFlags {
   UPDATE("--update", "-u", 0, Main.flags.add(new Update())),

@@ -1,5 +1,5 @@
-package lib.portage.interfaces;
-import lib.portage.package_management.EmergePackage;
+package main.lib.portage.interfaces;
+import main.lib.portage.package_management.EmergePackage;
 
 
 public interface FlagFeature {
