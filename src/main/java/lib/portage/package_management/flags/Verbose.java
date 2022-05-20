@@ -1,7 +1,7 @@
-package main.lib.portage.package_management.flags;
+package lib.portage.package_management.flags;
 
-import main.lib.portage.interfaces.FlagFeature;
-import main.lib.portage.package_management.EmergePackage;
+import lib.portage.interfaces.FlagFeature;
+import lib.portage.package_management.EmergePackage;
 
 public class Verbose implements FlagFeature {
 

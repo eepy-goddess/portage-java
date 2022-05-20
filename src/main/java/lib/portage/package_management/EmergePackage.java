@@ -1,4 +1,4 @@
-package main.lib.portage.package_management;
+package lib.portage.package_management;
 
 public class EmergePackage {
   private String path;

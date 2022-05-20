@@ -1,6 +1,7 @@
 plugins {
   id 'eclipse'
 }
+apply plugin: 'java'
 
 repositories {
   mavenCentral()
@@ -8,4 +9,9 @@ repositories {
 
 dependencies {
 
+}
+jar {
+   manifest {
+      attributes 'Main-Class': 'lib.portage.Main'
+   }
 }

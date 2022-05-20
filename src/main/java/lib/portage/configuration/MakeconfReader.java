@@ -1,4 +1,4 @@
-package main.lib.portage.configuration;
+package lib.portage.configuration;
 
 import java.io.File;
 import java.io.FileNotFoundException;

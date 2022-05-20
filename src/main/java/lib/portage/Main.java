@@ -1,12 +1,12 @@
-package main.lib.portage;
+package lib.portage;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import main.lib.portage.configuration.MakeconfReader;
-import main.lib.portage.enums.EmergeFlags;
-import main.lib.portage.interfaces.FlagFeature;
-import main.lib.portage.package_management.EmergePackage;
+import lib.portage.configuration.MakeconfReader;
+import lib.portage.enums.EmergeFlags;
+import lib.portage.interfaces.FlagFeature;
+import lib.portage.package_management.EmergePackage;
 
 public class Main {
 	//F
