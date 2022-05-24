@@ -6,6 +6,7 @@ import java.util.List;
 import lib.portage.configuration.MakeconfReader;
 import lib.portage.enums.EmergeFlags;
 import lib.portage.interfaces.FlagFeature;
+import lib.portage.package_management.Emerge;
 import lib.portage.package_management.EmergePackage;
 
 public class Main {
@@ -13,22 +14,9 @@ public class Main {
 	public static List<FlagFeature> flags = new ArrayList<FlagFeature>();
 
 	public static void main(String[] args) throws Exception {
-		EmergePackage ppackage = new EmergePackage(args[args.length - 1]);
 		MakeconfReader conf = new MakeconfReader("./etc/portage/make.conf");
-		for(String o : args) {
-			for(EmergeFlags p : EmergeFlags.values()) {
-				if(o.equals(p.flag) || o.equals(p.shortflag)) {
-				    boolean execution = getFlagById(p.flagId).deployFlag(ppackage);
-				    if(!execution) {
-				    	throw new Exception("Duplicate flag has been used");
-				    }
-				} else {
-					continue;
-			    }
-			}
-		}
-		for(int i = 0; i <= conf.getUseFlags().length - 1; i ++)
-		    ppackage.useFlagInstructions(conf.getUseFlags()[i]);
+		Emerge.command(args);
+		
 		
 	}
 	public static FlagFeature getFlagById(int id) {
