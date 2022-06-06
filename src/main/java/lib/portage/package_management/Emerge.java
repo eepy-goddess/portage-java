@@ -3,6 +3,7 @@ package lib.portage.package_management;
 import lib.portage.enums.EmergeFlags;
 import lib.portage.Main;
 import lib.portage.configuration.MakeconfReader;
+import lib.portage.package_management.flags.Help;
 
 public class Emerge {
 	public static void command(String[] args) {
@@ -16,7 +17,8 @@ public class Emerge {
 			}
 		} catch(ArrayIndexOutOfBoundsException e) {
 			System.out.println("no flags");
-			//TODO: display help command
+			Help help = new Help();
+			help.deployFlag(null);
 		}
 	}
 	public static void flagExecution(String[] args, EmergePackage pack) {
@@ -27,9 +29,7 @@ public class Emerge {
 				    if(!execution) {
 				    	System.out.println("<error handling system goes here>");
 				    }
-				} else {
-					continue;
-			    }
+				}
 			}
 		}
 		packageOperation(pack);

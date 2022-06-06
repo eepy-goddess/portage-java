@@ -7,7 +7,6 @@ import lib.portage.interfaces.FlagFeature;
 import lib.portage.package_management.Emerge;
 
 public class Main {
-	//F
 	public static List<FlagFeature> flags = new ArrayList<>();
 
 	public static void main(String[] args) {
